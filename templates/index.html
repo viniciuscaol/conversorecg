@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="static/script.js"></script>
+    <title>Gerador de ECG a partir de XML</title> 
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Eletrocardiograma (ECG)</h1>
+        <div class="upload-section">
+            <p>Faça o upload do seu arquivo XML de ECG (.xml ou .wxml)</p>
+            <input type="file" id="ecgFileInput" accept=".xml,.wxml">
+            <button onclick="uploadEcgFile()">Gerar ECG</button>
+            <p class="loading-message" id="loadingMessage">Gerando gráfico...</p>
+            <p class="error-message" id="errorMessage"></p>
+        </div>
+        <div class="ecg-result" id="ecgResult">
+            </div>
+    </div>
+</body>
+</html>
